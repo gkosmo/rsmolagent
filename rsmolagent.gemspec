@@ -2,7 +2,7 @@ Gem::Specification.new do |spec|
   spec.name          = "rsmolagent"
   spec.version       = "0.1.0"
   spec.authors       = ["gkosmo"]
-  spec.email         = ["your.actual.email@example.com"]
+  spec.email         = ["gkosmo1@hotmail.com"]
 
   spec.summary       = "A simple AI agent framework in Ruby"
   spec.description   = "RSmolagent is a Ruby library for building AI agents that can use tools to solve tasks"
