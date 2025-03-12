@@ -1,11 +1,13 @@
+require_relative "lib/rsmolagent/version"
+
 Gem::Specification.new do |spec|
   spec.name          = "rsmolagent"
-  spec.version       = "0.1.0"
+  spec.version       = RSmolagent::VERSION
   spec.authors       = ["gkosmo"]
   spec.email         = ["gkosmo1@hotmail.com"]
 
   spec.summary       = "A simple AI agent framework in Ruby"
-  spec.description   = "RSmolagent is a Ruby library for building AI agents that can use tools to solve tasks"
+  spec.description   = "RSmolagent is a Ruby library for building AI agents that can use tools to solve tasks. Supports both OpenAI and Claude models with automatic retries and rate limiting capabilities."
   spec.homepage      = "https://github.com/gkosmo/rsmolagent"
   spec.license       = "MIT"
   spec.required_ruby_version = Gem::Requirement.new(">= 2.6.0")
