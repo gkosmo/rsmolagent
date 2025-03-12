@@ -91,6 +91,18 @@ module RSmolagent
           answer = arguments["answer"] || arguments[:answer] || ""
           @memory.add_final_answer(answer)
           return { final_answer: true, answer: answer }
+        elsif tool_name == "answer"
+          # Handle answer tool as final answer too
+          result = arguments["result"] || arguments[:result] || ""
+          explanation = arguments["explanation"] || arguments[:explanation] || ""
+          
+          final_answer = result
+          if explanation && !explanation.empty?
+            final_answer += " (#{explanation})"
+          end
+          
+          @memory.add_final_answer(final_answer)
+          return { final_answer: true, answer: final_answer }
         else
           # Execute the tool
           result = execute_tool(tool_name, arguments)

@@ -22,5 +22,6 @@ Gem::Specification.new do |spec|
   
   # Optional dependencies for examples
   spec.add_development_dependency "ruby-openai", "~> 6.0"
+  spec.add_development_dependency "anthropic", "~> 0.3.0"
   spec.add_development_dependency "rspec", "~> 3.0"
 end
